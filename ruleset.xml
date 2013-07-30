@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<ruleset name="WMIMagento">
+  <description>Magento coding standards for the Warner Music International build.</description>
+  
+  
+  <!-- No duplicate class names - to discourage full path overrides -->
+  <rule ref="Generic.Classes.DuplicateClassName"/>
+  
+  <!-- No empty brace statements except for T_CATCH -->
+  <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+  
+  <!-- Reject inapproriate use of a FOR loop -->
+  <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+  
+  <!-- Reject multiple nested incrementer for loops -->
+  <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
+  
+  <!-- Reject use of if(true) or if(false) - unconditional ifs -->
+  <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+  
+  <!-- Unnecessary use of the final keyword in final classes -->
+  <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
+  
+  <!-- Discourage use of a function only calling its direct parent -->
+  <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+  
+  <!-- Alert on TODO comments -->
+  <rule ref="Generic.Commenting.Todo"/>
+  
+  <!-- Alert on FIXME comments -->
+  <rule ref="Generic.Commenting.Fixme"/>
+  
+  <!-- Discourage inline control structures -->
+  <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+  
+  <!-- Catch potential byte order errors that could corrupt the application -->
+  <rule ref="Generic.Files.ByteOrderMark"/>
+  
+  <!-- Ensure file ends with a newline -->
+  <rule ref="Generic.Files.EndFileNewline"/>
+  
+  <!-- Enforce use of Unix newlines -->
+  <rule ref="Generic.Files.LineEndings">
+    <properties>
+      <property name="eolChar" value="\n"/>
+    </properties>
+  </rule>
+  
+  <!-- Lines should be 80 chars long, show errors at 120 chars -->
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="80"/>
+      <property name="absoluteLineLimit" value="120"/>
+    </properties>
+  </rule>
+  
+  <!-- Ensure only one class or interface per file -->
+  <rule ref="Generic.Files.OneClassPerFile"/>
+  <rule ref="Generic.Files.OneInterfacePerFile"/>
+  
+  <!-- Ensure each statement is on a line by itself -->
+  <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+  
+  <!-- Ensure that there's nice formatting for multiple assignments -->
+  <rule ref="Generic.Formatting.MultipleStatementAlignment"/>
+  
+  <!-- Ensure there's a space between casting a type and the variable -->
+  <rule ref="Generic.Formatting.SpaceAfterCast"/>
+  
+  <!-- Ensure that variables arne't passed as a reference to a function -->
+  <rule ref="Generic.Functions.CallTimePassByReference"/>
+  
+  <!-- Ensure function arguments are spaced properly -->
+  <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+  
+  <!-- Function opening braces on new line -->
+  <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+  
+  <!-- Complexity calculation -->
+  <rule ref="Generic.Metrics.CyclomaticComplexity"/>
+  
+  <!-- Nesting limits -->
+  <rule ref="Generic.Metrics.NestingLevel">
+    <properties>
+      <property name="nestingLevel" value="3"/>
+      <property name="absoluteNestingLevel" value="5"/>
+    </properties>
+  </rule>
+  
+  <!-- Constructor name must be __construct -->
+  <rule ref="Generic.NamingConventions.ConstructorName"/>
+  
+  <!-- Constants of the form CONSTANT_NAME -->
+  <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+  
+  <!-- Ensure file starts with <?php -->
+  <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
+  
+  <!-- Ensure there's no use of deprecated functions -->
+  <rule ref="Generic.PHP.DeprecatedFunctions"/>
+  
+  <!-- Reject <? opening tags -->
+  <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+  
+  <!-- Reject alias functions -->
+  <rule ref="Generic.PHP.ForbiddenFunctions"/>
+  
+  <!-- Ensure that uses of true, false and null are lowercase -->
+  <rule ref="Generic.PHP.LowerCaseConstant"/>
+  
+  <!-- Ensure that all keywords are lowercase -->
+  <rule ref="Generic.PHP.LowerCaseKeyword"/>
+  
+  <!-- Silenced errors are a nono -->
+  <rule ref="Generic.PHP.NoSilencedErrors">
+    <properties>
+      <property name="error" value="true"/>
+    </properties>
+  </rule>
+  
+  <!-- Concatonating two strings should warn -->
+  <rule ref="Generic.PHP.UnnecessaryStringConcat">
+    <properties>
+      <property name="error" value="false"/>
+    </properties>
+  </rule>
+  
+  <!-- Ensure that all control structures are indented correctly -->
+  <rule ref="Generic.WhiteSpace.ScopeIndent"/>
+  
+  <!-- Ensure that a class is indented correctly by 4 spaces -->
+  <rule ref="PEAR.Classes.ClassDeclaration"/>
+  
+  <!-- Ensure the class commenting is correct to PHPDoc -->
+  <rule ref="PEAR.Commenting.ClassComment"/>
+  
+  <!-- Ensure that the file starts with comments -->
+  <rule ref="PEAR.Commenting.FileComment"/>
+  
+  <!-- Function commenting -->
+  <rule ref="PEAR.Commenting.FunctionComment"/>
+  
+  <!-- Inline commenting -->
+  <rule ref="PEAR.Commenting.InlineComment"/>
+  
+  <!-- Make sure that control statements are formatted properly -->
+  <rule ref="PEAR.ControlStructures.ControlSignature"/>
+  
+  <!-- Multi-line if statements are declared appropriately -->
+  <rule ref="PEAR.ControlStructures.MultiLineCondition"/>
+  
+  <!-- Ensure a function doesn't have a space between name and parenthesis -->
+  <rule ref="PEAR.Functions.FunctionCallSignature"/>
+  
+  <!-- Ensure function devcleration is correct -->
+  <rule ref="PEAR.Functions.FunctionDeclaration"/>
+  
+  <!-- Ensure that arguments with predefined values are at the end of the argument list -->
+  <rule ref="PEAR.Functions.ValidDefaultValue"/>
+  
+  <!-- Indenting on new blocks of code -->
+  <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>
+  
+  <!-- Ensure closing brace is inline with opening statement -->
+  <rule ref="PEAR.WhiteSpace.ScopeClosingBrace"/>
+  
+  <!-- Ensure that @throw tags match with the exceptions thrown -->
+  <rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>
+  
+  <!-- Check for functions outside of a class decleration -->
+  <rule ref="Squiz.Functions.GlobalFunction"/>
+  
+  <!-- Check incrementors and decrementors aren't confusing -->
+  <rule ref="Squiz.Operators.IncrementDecrementUsage"/>
+  
+  <!-- Ensure that && and || are used instead of AND and OR -->
+  <rule ref="Squiz.Operators.ValidLogicalOperators"/>
+  
+  <!-- Warn on commented out code blocks -->
+  <rule ref="Squiz.PHP.CommentedOutCode"/>
+  
+  <!-- Scope validation on member variables -->
+  <rule ref="Squiz.Scope.MemberVarScope"/>
+  
+  <!-- Scope validation on methods -->
+  <rule ref="Squiz.Scope.MethodScope"/>
+  
+  <!-- Check that $this isn't used in static methods -->
+  <rule ref="Squiz.Scope.StaticThisUsage"/>
+  
+  <!-- Verify that echoed strings aren't called like functions -->
+  <rule ref="Squiz.Strings.EchoedStrings"/>
+  
+  
+  <!-- and now for my own pickiness! -->
+  
+  <!-- Ensure protected start with _ and private start with __  - functions -->
+  <!-- <rule ref="WMIMagento.NamingConventions.Functions"/> -->
+  
+  <!-- Ensure protected start with _ and private start with __  - parameters -->
+  <!-- <rule ref="WMIMagento.NamingConventions.Parameters"/> -->
+  
+</ruleset>
