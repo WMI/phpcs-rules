@@ -67,7 +67,7 @@
   <!-- Ensure there's a space between casting a type and the variable -->
   <rule ref="Generic.Formatting.SpaceAfterCast"/>
   
-  <!-- Ensure that variables arne't passed as a reference to a function -->
+  <!-- Ensure that variables aren't passed as a reference to a function -->
   <rule ref="Generic.Functions.CallTimePassByReference"/>
   
   <!-- Ensure function arguments are spaced properly -->
@@ -119,11 +119,11 @@
   </rule>
   
   <!-- Concatonating two strings should warn -->
-  <rule ref="Generic.PHP.UnnecessaryStringConcat">
+  <!--rule ref="Generic.PHP.UnnecessaryStringConcat">
     <properties>
       <property name="error" value="false"/>
     </properties>
-  </rule>
+  </rule-->
   
   <!-- Ensure that all control structures are indented correctly -->
   <rule ref="Generic.WhiteSpace.ScopeIndent"/>
@@ -135,7 +135,10 @@
   <rule ref="PEAR.Commenting.ClassComment"/>
   
   <!-- Ensure that the file starts with comments -->
-  <rule ref="PEAR.Commenting.FileComment"/>
+  <!--
+    Commented out for now, because we don't know what license we'll be working under, and we don't want to have a mass update task
+    <rule ref="PEAR.Commenting.FileComment"/>
+  -->
   
   <!-- Function commenting -->
   <rule ref="PEAR.Commenting.FunctionComment"/>
