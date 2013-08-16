@@ -49,7 +49,7 @@
   <!-- Lines should be 80 chars long, show errors at 120 chars -->
   <rule ref="Generic.Files.LineLength">
     <properties>
-      <property name="lineLimit" value="80"/>
+      <property name="lineLimit" value="100"/>
       <property name="absoluteLineLimit" value="120"/>
     </properties>
   </rule>
@@ -156,7 +156,8 @@
   <rule ref="PEAR.Functions.FunctionCallSignature"/>
   
   <!-- Ensure function devcleration is correct -->
-  <rule ref="PEAR.Functions.FunctionDeclaration"/>
+  <!-- Replacing this with local version to avoid conflict between this and newline funciton def-->
+  <!-- <rule ref="PEAR.Functions.FunctionDeclaration"/> -->
   
   <!-- Ensure that arguments with predefined values are at the end of the argument list -->
   <rule ref="PEAR.Functions.ValidDefaultValue"/>
